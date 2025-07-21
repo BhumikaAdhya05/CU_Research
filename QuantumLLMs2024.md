@@ -315,3 +315,203 @@ Where `ψ` is the meaning state, and `H` is how meanings change across layers.
 > Quantum math is not just sci-fi. It might help us understand the black box of language models.
 
 ---
+
+# The Quantum LLM: Modeling Semantic Spaces with Quantum Principles
+
+**Author**: Timo Aukusti Laine  
+**Published**: May 2025  
+**Contact**: timo@financialphysicslab.com
+
+---
+
+## 📘 Overview
+
+This paper introduces a **quantum-inspired framework** for modeling semantic representations inside Large Language Models (LLMs). It draws parallels from **quantum mechanics** to explain how LLMs process language — using analogies like **Hilbert spaces**, **wave functions**, **Schrödinger equations**, **gauge fields**, and **semantic charge**.
+
+> LLMs are not quantum systems, but this analogy helps explain their behavior in a new light and opens up future quantum computing applications in NLP.
+
+---
+
+## 🔑 Six Core Assumptions in the Framework
+
+### 1. **Completeness of Vocabulary**
+- The LLM's vocabulary is treated as a **complete basis** for semantic representation.
+- Any complex meaning can be approximated as a **superposition** of token vectors.
+- _Example_: "Profound sadness" can be written as a combination of tokens like "sadness", "melancholy", "grief".
+
+### 2. **Semantic Space = Complex Hilbert Space**
+- The LLM's embedding space is extended to a **complex vector space** (i.e., wave functions with real + imaginary parts).
+- This allows modeling of **superposition**, **interference**, and **phase-based contextual shifts**.
+- _Example_: The word "bank" can take on different meanings (finance or river) based on phase shifts in context.
+
+### 3. **Discretization of Semantic States**
+- Semantic states are discrete (quantized), aligned with token-level processing.
+- Meaning is built as a **superposition of token vectors**, similar to quantum basis states.
+- LLMs map text to a discrete set of token embeddings.
+
+### 4. **Semantic Evolution ~ Schrödinger Equation**
+- The flow of semantic meaning across layers is likened to a **Schrödinger-like equation**:
+
+$$
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle
+$$
+
+- **Semantic momentum** is the rate of change of meaning.
+- ℏ: semantic granularity  
+- m: semantic inertia (how hard it is to shift a concept’s meaning)
+
+### 5. **Nonlinear Dynamics (Advanced Model)**
+- Introduces **nonlinear Schrödinger Equation (NLSE)** and **nonlinear potentials**:
+  - Self-interaction via:
+
+    $$
+    V(x) = \gamma|\psi(x, t)|^2
+    $$
+
+  - **Double-well or Mexican Hat potentials** represent **semantic disambiguation** and **context resolution**.
+  - _Example_: The word "bank" collapses into one of two interpretations based on nearby words.
+
+### 6. **Semantic Charge and Gauge Invariance**
+- Each word/phrase has a **semantic charge** (like electric charge).
+- A **gauge field** maintains conservation of semantic charge.
+- LLMs behave similarly to gauge-invariant systems in physics, maintaining consistent meaning across rephrased text.
+- _Example_: "happy", "joyful" = positive charge; "sad", "angry" = negative charge.
+
+---
+
+## 🧠 Key Concepts in Detail
+
+### 🧩 A. Completeness of Vocabulary
+- Tokens form a basis set.
+- Subword tokenization (like BPE, WordPiece) increases effective coverage.
+- Words not in the vocabulary can still be approximated using known subwords.
+- **Superposition** of tokens allows representing complex meanings.
+
+### 📐 B. Complex Hilbert Space Representation
+
+$$
+\mathcal{H} = \mathbb{C} \otimes \mathbb{R}^N \cong \mathbb{C}^N
+$$
+
+- Complex vectors carry **phase information** that can encode context, ambiguity, and interference.
+- Magnitude = importance; Phase = context
+
+---
+
+### 🧱 C. Discretization and State Representations
+
+$$
+|prompt\rangle = \sum_i c_i |word_i\rangle
+$$
+
+$$
+|token_i\rangle \propto \tilde{e}_i
+$$
+
+$$
+|semantic\rangle = \sum_i c_i |semantic\ token_i\rangle
+$$
+
+$$
+|semantic\rangle = \sum_k a_k |\phi_k\rangle
+$$
+
+---
+
+### 🌊 D. Schrödinger-Like Evolution
+
+$$
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle
+$$
+
+$$
+\hat{H} = \frac{\hat{p}^2}{2m} + V(\hat{x})
+$$
+
+ℏ = semantic resolution  
+m = resistance to meaning shift (semantic inertia)
+
+---
+
+### 🔁 E. Nonlinear Propagation
+
+#### Nonlinear Self-Interaction:
+$$
+V(x) = \gamma|\psi(x, t)|^2
+$$
+
+#### Double-Well Potential:
+$$
+V(x) = a(x^2 - b^2)^2
+$$
+
+#### Mexican Hat Potential:
+$$
+V(x) = \mu^2|\psi|^2 - \lambda|\psi|^4
+$$
+
+- Used to model **ambiguity resolution** and **context-based disambiguation**.
+
+---
+
+### 🧲 F. Semantic Charge & Gauge Fields
+
+**Gauge transformation**:
+
+$$
+\psi(x^\mu) \rightarrow e^{i\theta(x^\mu)}\psi(x^\mu)
+$$
+
+**Covariant derivative**:
+
+$$
+D_\mu = \partial_\mu - iqA_\mu
+$$
+
+**Gauge-invariant Lagrangian**:
+
+$$
+\mathcal{L} = -\frac{1}{4q^2}F_{\mu\nu}F^{\mu\nu} + \text{(Schrödinger terms)} + \mathcal{L}_\text{nonlinear}
+$$
+
+---
+
+### 📏 G. Dimensional Analysis
+
+| Quantity           | Units                                  |
+|--------------------|-----------------------------------------|
+| Energy (E)         | $[m][x]^2 / [t]^2$                      |
+| ℏ (granularity)    | $[m][x]^2 / [t]$                        |
+| Semantic charge (q)| $\sqrt{[m][x]/[t]}$                     |
+| Gauge field (A)    | $[t] / ([x] \sqrt{[m][x]})$             |
+
+---
+
+### 📡 H. Semantic Gauge Field Interpretation
+
+- **Scalar potential** ($\phi$ or $A_0$) = global context energy  
+- **Vector potential** ($A_i$) = local semantic forces  
+- Together, they influence wave function $\psi$ and guide response generation.
+
+---
+
+## 📘 Conclusion
+
+- This framework draws deep analogies between **quantum mechanics** and **LLM semantics**.
+- Concepts like **wave function**, **phase**, **interference**, and **gauge invariance** help explain complex behaviors in LLMs.
+- Encourages the future use of **quantum algorithms** and **quantum hardware** to build **efficient, powerful NLP systems**.
+
+> _This is not claiming that LLMs are quantum devices — but that quantum thinking provides useful tools to understand them and may guide their next evolution._
+
+---
+
+## 📚 References
+
+1. Vaswani et al., *Attention Is All You Need*, NeurIPS 2017  
+2. Brown et al., *GPT-3: Language Models Are Few-Shot Learners*, NeurIPS 2020  
+3. Chollet, *Deep Learning with Python*, Manning, 2017  
+4. Laine, *Semantic Wave Functions*, OAJAST 2025  
+5. Lin et al., *Statistical Physics of Deep Learning*, J. Stat. Phys., 2017  
+6. Amari & Maginu, *Statistical Neurodynamics*, Neural Networks, 1988  
+7. Gage, *Byte Pair Encoding*, C Users Journal, 1994  
+8. Wu et al., *Google’s Neural Machine Translation System*, arXiv:1609.08144
