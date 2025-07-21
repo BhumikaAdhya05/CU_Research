@@ -64,18 +64,27 @@ Modifications:
    - One acts on input, one on output.
    - Based on Entanglement Renormalization (ER) and MERA.
 
-3. **Build New MPO (MPO_new)**  
-    $$
-    \text{MPO}_{\text{old}} \approx U \times \text{MPO}_{\text{new}} \times V^\dagger
-    $$
-    
-    And solving for the new MPO gives:
-    
-    $$
-    \text{MPO}_{\text{new}} \approx U^\dagger \times \text{MPO}_{\text{old}} \times V
-    $$
-   - Use TEBD (Time-Evolving Block Decimation) to compute MPO_new.
-   - Ensure χ_new ≤ χ_old.
+### 🧮 Build New MPO (`MPO_new`)
+
+The original MPO can be approximately decomposed as:
+
+$$
+\text{MPO}_{\text{old}} \approx U \times \text{MPO}_{\text{new}} \times V^\dagger
+$$
+
+And solving for the new MPO gives:
+
+$$
+\text{MPO}_{\text{new}} \approx U^\dagger \times \text{MPO}_{\text{old}} \times V
+$$
+
+- Use **TEBD** (Time-Evolving Block Decimation) to compute $\text{MPO}_{\text{new}}$.
+- Ensure that the new bond dimension satisfies:  
+  $$
+  \chi_{\text{new}} \leq \chi_{\text{old}}
+  $$
+
+This guarantees that the quantum-enhanced layer remains efficient and memory-conscious.
 
 > **Result**: A compressed, entanglement-reduced quantum-compatible weight operator.
 
