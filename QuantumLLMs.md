@@ -126,3 +126,168 @@ Supported by DIPC, Ikerbasque, Basque Government, Diputación de Gipuzkoa, EIC, 
 
 ---
 
+# Quantum LLMs via Tensor Network Disentanglers (Explained Simply)
+
+**Authors**: Borja Aizpurua, Saeed S. Jahromi, Sukhbinder Singh, Román Orús  
+**Published**: 2024
+
+---
+
+## 🚀 What is this paper about?
+
+This paper explores a new way to improve Large Language Models (LLMs)—like ChatGPT or LLaMA—by combining:
+
+- **Quantum computing**
+- **Tensor network methods** (from physics)
+
+The goal is to replace the large and expensive parts of LLMs (weight matrices) with a mix of:
+
+- Quantum circuits  
+- Tensor network compression
+
+This allows models to be **smaller, more efficient**, and potentially **more accurate**, while using less memory.
+
+---
+
+## 🔍 Why is this important?
+
+- LLMs are **very large** and **expensive** to run and train.
+- Quantum processors are **getting better** and could soon handle meaningful tasks.
+- Tensor networks are a powerful **compression tool** that keeps important information while reducing size.
+
+> This work creates a **hybrid architecture** that mixes classical and quantum tools to get the best of both.
+
+---
+
+## 🧠 Main Idea: Replace Big Matrices with VQC + TN + VQC
+
+LLMs have layers with big weight matrices. This paper proposes replacing each weight matrix with:
+
+Each deep layer in the LLM is restructured as:
+
+**Variational Quantum Circuit (VQC) ➜ Tensor Network (TN) ➜ Another VQC**
+
+# Quantum LLMs via Tensor Network Disentanglers (Explained Simply)
+
+$$
+W \approx U \times \text{MPO}_{\text{new}} \times V^\dagger
+$$
+
+Where:
+
+- $W$ = original weight matrix  
+- $U$ and $V^\dagger$ = unitary quantum disentangling circuits  
+- $\text{MPO}_{\text{new}}$ = compressed tensor network (Matrix Product Operator)
+
+---
+
+
+This structure can:
+- Learn better correlations
+- Save memory
+- Still work within classical Transformer architectures
+
+---
+
+## 🧱 How They Do It: Step-by-Step
+
+### 1. Start with a weight matrix (W) in an LLM
+This could be from any deep layer, like attention or MLP.
+
+### 2. Compress it with an MPO
+Use a **Matrix Product Operator** to break W into smaller tensors. Truncate bond dimensions (like pruning less important values).
+
+### 3. Disentangle with quantum circuits (U and V†)
+- Apply one quantum circuit to the input side (U)
+- Apply another to the output side (V†)
+- These reduce the entanglement in W, making the compression more efficient
+
+This gives:
+
+### 4. Rebuild the new tensor + quantum layer
+The **new compressed version (MPO_new)** + the **quantum gates (U, V†)** form the new layer of the LLM.
+
+---
+
+## 🧪 How Do You Train or Use This?
+
+- You can start with any trained LLM (like BERT or LLaMA)
+- Replace deep layers using this VQC+TN+VQC setup
+- Optimize it:
+
+  - Train the VQCs using a method like **VQE** (Variational Quantum Eigensolver)
+  - Retrain MPO with classical tensor optimization methods
+
+- On quantum hardware:
+  - Input must be encoded into quantum states
+  - Output must be sampled from qubits
+
+> Accuracy improves as you:
+> - Increase quantum circuit depth
+> - Increase tensor bond dimensions
+
+---
+
+## 📊 Advantages of This Method
+
+✅ Compresses LLMs without losing much accuracy  
+✅ Can **improve** performance when you increase depth/dimensions  
+✅ Works with today's LLMs (no need to start from scratch)  
+✅ Uses **existing** quantum hardware capabilities (NISQ)
+
+---
+
+## 🧠 What’s a “Disentangler”?
+
+A **disentangler** is a small quantum circuit that "untangles" complex data—kind of like simplifying a tangled pair of earphones.
+
+Here, it helps reduce the complexity (entanglement) in the tensor network, allowing the model to be represented with less information.
+
+---
+
+## 💡 How is This Better Than Classical Compression?
+
+- Classical compression only reduces size.
+- This method:
+  - Compresses
+  - Adds **extra expressive power** using quantum circuits
+  - Keeps models **accurate and efficient**
+
+---
+
+## 🔭 Future of This Idea
+
+- Works even with quantum devices with just a few hundred qubits
+- Can be combined with other tricks:
+  - Quantization
+  - Knowledge distillation
+  - Low-rank factorization
+- May become one of the **first real quantum AI applications**
+
+---
+
+## 🧾 Credits and Support
+
+Supported by:
+
+- Donostia International Physics Center (DIPC)
+- Ikerbasque
+- Basque Government
+- European Innovation Council (EIC)
+- Multiverse Computing
+- Spanish Government
+
+---
+
+## 📚 Key References
+
+- Vaswani et al., 2017 – Transformers ("Attention is All You Need")  
+- OpenAI GPT Reports  
+- CompactifAI (2024) – Previous LLM compression work  
+- Preskill, 2018 – NISQ quantum computing  
+- Vidal – Entanglement Renormalization & MERA
+
+---
+
+
+
