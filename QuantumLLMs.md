@@ -65,12 +65,15 @@ Modifications:
    - Based on Entanglement Renormalization (ER) and MERA.
 
 3. **Build New MPO (MPO_new)**  
-   \[
-   \text{MPO}_{\text{old}} \approx U \times \text{MPO}_{\text{new}} \times V^\dagger
-   \]  
-   \[
-   \text{MPO}_{\text{new}} \approx U^\dagger \times \text{MPO}_{\text{old}} \times V
-   \]  
+    $$
+    \text{MPO}_{\text{old}} \approx U \times \text{MPO}_{\text{new}} \times V^\dagger
+    $$
+    
+    And solving for the new MPO gives:
+    
+    $$
+    \text{MPO}_{\text{new}} \approx U^\dagger \times \text{MPO}_{\text{old}} \times V
+    $$
    - Use TEBD (Time-Evolving Block Decimation) to compute MPO_new.
    - Ensure χ_new ≤ χ_old.
 
